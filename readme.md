@@ -1,13 +1,13 @@
-Installation
-=================
+# mbMenu Readme
 
-First download the zip file containing mbMenu. http://www.mikebarlow.co.uk/downloads/mbmenu.zip
-Once downloaded, unzip the contents into the plugin folder of your Wolf Installation. (Default will be /wolf/plugins/).
+## Installation
+
+First download mbMenu from https://github.com/snsmurf/mbMenu
+Once downloaded, create a folder within the WolfCMS plugins folder (default will be /wolf/plugins/) called 'mbmenu' then unzip the contents of the download into this folder.
 
 Next login to the admin area of your WolfCMS installation and navigate to the the plugin list found under the Administration tab. Once there, just check the enable box next to mbMenu. This will run the installation which will setup the MySQL for you.
 
-Using mbMenu
-=================
+## Using mbMenu
 
 To start using mbMenu, navigate to the new "Menus" tab which should now appear at the top of your admin (if it's not there, please check you have installed it correctly).
 
@@ -21,8 +21,7 @@ Repeat the last step to keep adding items to your menu.
 Once you've setup your menu, you will need to add some php code to your layout (accessed via the layouts tab in the admin). If you click into the item management ("manage" link on the main mbMenu admin page), there is some sample code at the bottom of that page which you can copy and paste into your layout to display the menu.
 From here you can then modified what is echo'd via php to, for example, make the menu appear as a unordered list which can be styled.
 
-Support
-=================
+## Support
 
 While I will attempt to provide support as much as possible, this is only a hobby project so I don't have all the time in the world to maintain the script and update it as much as I would like.
-If you appreciate what I do then and would like give a donation then that would be most welcome and can be done via the paypal button in the right menu at http://www.mikebarlow.co.uk/
+If you appreciate what I do then and would like give a donation then that would be most welcome and can be done via the paypal button in the right menu at www.mikebarlow.co.uk.
