@@ -7,7 +7,7 @@ function getMenuItems(menu)
 	{
 		$.ajax({
 				type: "post",
-				url: "/admin/plugin/mbmenu/getMenuItems/",
+				url: "?/admin/plugin/mbmenu/getMenuItems/",
 				cache: false,
 				data: "&menuid="+menu.value,
 				success: function(data)
@@ -23,7 +23,7 @@ function loadMenuItems(menuid,linkparent)
 {
 	$.ajax({
 			type: "post",
-			url: "/admin/plugin/mbmenu/getMenuItems/",
+			url: "?/admin/plugin/mbmenu/getMenuItems/",
 			cache: false,
 			data: "&menuid="+menuid+"&linkparent="+linkparent,
 			success: function(data)
