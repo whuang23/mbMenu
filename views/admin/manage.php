@@ -107,6 +107,7 @@ if(!defined("CMS_ROOT"))
 	
 	To display your menus, use the code below as a basis. Place the code where you want your menu to appear in your layout:<br /><br />
 	
+	<h4>1.Normal Version</h4>
 	<code><pre>
 	&lt;?php
 	$menu = loadMbMenu('<?php echo $menu->menucode; ?>');
@@ -117,13 +118,41 @@ if(!defined("CMS_ROOT"))
 			echo "&lt;a href='".$item->linkurl."'".$item->linkoptions."&gt;".$item->linktext."&lt;/a&gt;&lt;br /&gt;";
 			if(isset($item->subitems) && count($item->subitems) > 0)
 			{
+				
 				foreach($item->subitems as $subitem)
 				{
 					echo "--&lt;a href='".$subitem->linkurl."'".$subitem->linkoptions."&gt;".
 					$subitem->linktext."&lt;/a&gt;&lt;br /&gt;";
 				}
+				
 			}
 		}
+	}
+	?&gt;
+	</pre></code>
+	
+	<h4>2.Unformatted List Version</h4>
+	<code><pre>
+	&lt;?php
+	$menu = loadMbMenu('<?php echo $menu->menucode; ?>');
+	if(count($menu) > 0)
+	{
+		echo "&lt;ul&gt;";
+		foreach($menu as $item)
+		{
+			echo "&lt;li&gt; &lt;a href='".$item->linkurl."'".$item->linkoptions."&gt;".$item->linktext."&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;";
+			if(isset($item->subitems) && count($item->subitems) > 0)
+			{
+				echo "&lt;ul&gt;";
+				foreach($item->subitems as $subitem)
+				{
+					echo "&lt;li&gt; &lt;a href='".$subitem->linkurl."'".$subitem->linkoptions."&gt;".
+					$subitem->linktext."&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;";
+				}
+				echo "&lt;/ul&gt;";
+			}
+		}
+		echo "&lt;/ul&gt;";
 	}
 	?&gt;
 	</pre></code>
